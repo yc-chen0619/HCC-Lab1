@@ -15,23 +15,29 @@ $pip install pupil-apriltags opencv-python
 
 ## Build the Workspace
 ```bash
-$ cd ~/tello_ros_ws/src/
+$ cd ~/tello_ros_ws/
 $ colcon build --packages-select apriltag_detector_pkg
 ```
 
-##  Source the Workspace
+## Source the Workspace
 ```bash
 $ source ~/tello_ros_ws/install/setup.bash
 ```
 
-## Run the node to take photo
+1. ## Run the node to take photo
 ```bash
 $ ros2 launch tello_driver teleop_launch.py
 $ ros2 run apriltag_detector_pkg take_photo
 ```
 
-## Run the node to localization in Rviz by using AprilTag
+2. ## Find camera intrinsic matrix
+
+
+3. ## Run the node to localization in Rviz by using AprilTag
+you need to open image_subscriber.py and modify the camera intrinsic parameter. and then.
 ```bash
+$ cd ~/tello_ros_ws/
+$ colcon build --packages-select apriltag_detector_pkg
 $ ros2 launch tello_driver teleop_launch.py
 $ ros2 run apriltag_detector_pkg apriltag_tracker_launch.py
 ```
