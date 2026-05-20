@@ -24,16 +24,16 @@ $ colcon build --packages-select apriltag_detector_pkg
 $ source ~/tello_ros_ws/install/setup.bash
 ```
 
-1. ## Run the node to take photo
+## 1. Run the node to take photo
   ```bash
   $ ros2 launch tello_driver teleop_launch.py
   $ ros2 run apriltag_detector_pkg take_photo
   ```
 
-2. ## Find camera intrinsic matrix
+## 2. Find camera intrinsic matrix
   use ``` camera_calibration.py ``` to get  camera intrinsic matrix.
 
-3. ## Run the node to localization in Rviz by using AprilTag
+## 3. Run the node to localization in Rviz by using AprilTag
   you need to open ``` image_subscriber.py ``` and modify the camera intrinsic parameter. and then.
   ```bash
   $ cd ~/tello_ros_ws/
