@@ -42,11 +42,11 @@ class ImageSubscriber(Node):
         self.pose_pub = self.create_publisher(PoseStamped, '/drone_pose', 10)
 
         # === Camera intrinsics === (You must adjust based on your Tello's camera)              #TODO
-        self.fx = 0.0000000     # Focal length x
-        self.fy = 0.0000000     # Focal length y
-        self.cx = 0.0000000     # Principal point x (image center)
-        self.cy = 0.0000000     # Principal point y
-        self.tag_size = 0.0000  # Size of the AprilTag in meters
+        self.fx = 956.0621110493081     # Focal length x
+        self.fy = 921.110508356438      # Focal length y
+        self.cx = 471.4821215939283     # Principal point x (image center)
+        self.cy = 380.2998652355449     # Principal point y
+        self.tag_size = 0.02325         # Size of the AprilTag in meters
 
         self.get_logger().info("Pose publisher Initialized.")
 
